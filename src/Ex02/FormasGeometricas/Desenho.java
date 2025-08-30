@@ -3,12 +3,28 @@ package Ex02.FormasGeometricas;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class Desenho {
 
-    List<Forma> list = new ArrayList<>();
+    private List<Forma> formas;
 
+    public Desenho() {
+        this.formas = new ArrayList<>();
+    }
 
-     public double CalcularaAreaTotal(){
-         return 0;
+    public void adicionarForma(Forma forma){
+        formas.add(forma);
+    }
+
+    public double calcularAreaTotal(){
+         double areaTotal = 0;
+        for (Forma forma : formas){
+        areaTotal += forma.calcularArea();
      }
+
+    return areaTotal;
+}
+
+
 }

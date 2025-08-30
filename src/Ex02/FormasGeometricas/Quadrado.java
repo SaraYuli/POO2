@@ -12,6 +12,7 @@ public class Quadrado implements Forma {
     @Override
     public double calcularArea(){
         double area = lado * lado;
+        return area;
     }
 
 }

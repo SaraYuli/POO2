@@ -7,11 +7,16 @@ public class Bicicleta implements Veiculos{
     private String modelo;
     private String cor;
 
-    public Bicicleta(int velocidadeMax, int velocidadeAtul, String modelo, String cor) {
+    public Bicicleta(int velocidadeMax, int velocidadeAtual, String modelo, String cor) {
         this.velocidadeMax = velocidadeMax;
-        this.velocidadeAtul = velocidadeAtul;
+        this.velocidadeAtul = velocidadeAtual;
         this.modelo = modelo;
         this.cor = cor;
+    }
+
+    @Override
+    public String toString() {
+        return  "Modelo: " + modelo + " | Cor; " + cor + " | Velocidade Maxima: " + velocidadeMax + "Km/h";
     }
 
     @Override
@@ -26,7 +31,7 @@ public class Bicicleta implements Veiculos{
 
     @Override
     public void ligarMotor(){
-        System.out.println("Bicicleta não tem motor");
+        System.out.println("Bicicleta não tem motor!");
 
     }
 
